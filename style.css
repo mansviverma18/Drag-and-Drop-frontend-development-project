@@ -1,0 +1,117 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  overflow: hidden; 
+}
+
+header {
+  background-color: #111;
+  color: #fff;
+  padding: 1rem;
+  text-align: center;
+  font-size: 1.5rem;
+  height: 70px;
+}
+
+main {
+  display: flex;
+  height: calc(100% - 70px); 
+  width: 100%;
+}
+
+.sidebar, .editor {
+  flex: 1 1 250px;
+  background: #ed3361;
+  padding: 1rem;
+  overflow-y: auto;
+}
+
+.sidebar .draggable {
+  background: #ef9696;
+  padding: 12px;
+  margin-bottom: 10px;
+  cursor: grab;
+  border-radius: 6px;
+  text-align: center;
+  font-weight: 500;
+  transition: background 0.3s;
+}
+
+.sidebar .draggable:hover {
+  background: #fbb0b0;
+}
+
+.canvas {
+  flex: 2 1 auto;
+  background: #f0fd7e;
+  border: 2px dashed #89d662;
+  padding: 1rem;
+  overflow-y: auto;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.placeholder {
+  color: #999;
+  font-style: italic;
+  margin-top: 150px;
+  font-size: 1.1rem;
+}
+
+.editor form {
+  display: flex;
+  flex-direction: column;
+}
+
+.editor h3 {
+  color: #fff;
+}
+
+.editor label {
+  color: #fff;
+  margin: 0.5rem 0 0.2rem;
+}
+
+.editor input {
+  padding: 8px;
+  border-radius: 5px;
+  border: none;
+  font-size: 0.9rem;
+  margin-bottom: 0.5rem;
+}
+
+button {
+  margin-top: 1rem;
+  padding: 0.6rem;
+  background: #b5b766;
+  color: #1c0e0e;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  font-weight: 600;
+  transition: background 0.2s;
+}
+
+button:hover {
+  background: #d0da6c;
+}
+
+@media (max-width: 768px) {
+  main {
+    flex-direction: column;
+    height: auto;
+    overflow: auto;
+  }
+
+  .canvas {
+    min-height: 300px;
+  }
+}

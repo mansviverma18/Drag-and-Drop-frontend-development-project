@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Drag & Drop Builder</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Website Builder</h1>
+  </header>
+  <main>
+    <section class="sidebar">
+      <h3>Elements</h3>
+      <div class="draggable" draggable="true" data-type="text">Text</div>
+      <div class="draggable" draggable="true" data-type="image">Image</div>
+      <div class="draggable" draggable="true" data-type="button">Button</div>
+    </section>
+    <section class="canvas" id="canvas">
+      <p class="placeholder">Drag elements here</p>
+    </section>
+    <section class="editor" id="editor">
+      <h3>Edit Element</h3>
+      <form id="editForm">
+  <label>Text / URL: <input type="text" id="content"></label>
+  <label>Font Size: <input type="number" id="fontSize" min="8"></label>
+  <label>Text Color: <input type="color" id="color"></label>
+  <label id="widthLabel" style="display:none;">Width (px): <input type="number" id="width" min="10"></label>
+  <label id="heightLabel" style="display:none;">Height (px): <input type="number" id="height" min="10"></label>
+  
+  <button type="submit">Update</button>
+</form>
+
+    </section>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
