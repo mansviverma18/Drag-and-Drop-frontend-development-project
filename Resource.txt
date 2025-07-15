@@ -1,0 +1,19 @@
+# 📚 Resources Used
+
+1. **MDN Web Docs** – Documentation for HTML, CSS, and JavaScript  
+   https://developer.mozilla.org/
+
+2. **W3Schools** – Quick HTML/CSS references  
+   https://www.w3schools.com/
+
+3. **Bing Images** – For default image URLs  
+   https://www.bing.com/images
+
+4. **Stack Overflow** – General debugging help and snippets  
+   https://stackoverflow.com/
+
+5. **CSS Tricks** – Flexbox, layout tips  
+   https://css-tricks.com/
+
+6. **Google Fonts Preview** – For understanding different font styles  
+   https://fonts.google.com/
