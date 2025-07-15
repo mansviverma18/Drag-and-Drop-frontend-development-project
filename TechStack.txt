@@ -1,0 +1,16 @@
+# ⚙️ Tech Stack Used
+
+1. **HTML5**
+   - Structure of the webpage
+   - Semantic tags
+
+2. **CSS3**
+   - Flexbox layout
+   - Media queries for responsiveness
+   - UI styling with custom properties
+
+3. **JavaScript (Vanilla JS / ES6)**
+   - Drag and drop API
+   - DOM manipulation
+   - Style editing logic
+   - Form handling
