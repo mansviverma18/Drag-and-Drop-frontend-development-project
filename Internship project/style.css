@@ -1,0 +1,181 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #F9DBBD;
+  overflow: hidden;
+}
+
+/* HEADER */
+header {
+  background-color: #9b3652;
+  padding: 1rem 0;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+  overflow: hidden; /* Ensure the h1 doesn’t overflow */
+}
+
+header h1 {
+  margin: 0;
+  font-size: 3rem;
+  color: white;
+  line-height: 1.2;
+  max-width: 100%;
+  word-break: break-word;
+}
+
+/* MAIN LAYOUT */
+main {
+  display: flex;
+  height: calc(100% - 70px); 
+  width: 100%;
+}
+
+/* SIDEBAR & EDITOR */
+.sidebar, .editor {
+  flex: 1 1 250px;
+  background: #FFA5AB;
+  padding: 1rem;
+  overflow-y: auto;
+  transition: background 0.3s;
+}
+
+/* DRAGGABLE BOXES */
+.sidebar .draggable {
+  background: #DA627D;
+  color: #fff;
+  padding: 12px;
+  margin-bottom: 12px;
+  cursor: grab;
+  border-radius: 10px;
+  text-align: center;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.sidebar .draggable:hover {
+  background: #A53860;
+  transform: scale(1.05);
+}
+
+/* CANVAS */
+.canvas {
+  flex: 2 1 auto;
+  background: #F9DBBD;
+  border: none;
+  box-shadow: inset 0 0 0 3px #DA627D;
+  border-radius: 8px;
+  padding: 1.5rem;
+  overflow-y: auto;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: background 0.3s;
+  margin-top: 0; /* Ensure no overlap with header */
+}
+
+.placeholder {
+  color: #450920;
+  font-style: italic;
+  margin-top: 150px;
+  font-size: 1.2rem;
+  opacity: 0.8;
+}
+
+/* EDITOR STYLING */
+.editor h3 {
+  color: #450920;
+  margin-bottom: 1rem;
+  font-size: 1.2rem;
+  border-bottom: 2px solid #DA627D;
+  padding-bottom: 0.4rem;
+}
+
+.editor label {
+  color: #450920;
+  margin: 0.5rem 0 0.2rem;
+  font-weight: 600;
+}
+
+.editor input {
+  padding: 10px;
+  border-radius: 8px;
+  border: 2px solid #DA627D;
+  font-size: 1rem;
+  margin-bottom: 0.7rem;
+  background: #fff;
+  transition: all 0.3s;
+}
+
+.editor input:focus {
+  outline: none;
+  border-color: #A53860;
+  box-shadow: 0 0 6px #DA627D;
+}
+
+/* BUTTONS */
+button {
+  margin-top: 1rem;
+  padding: 0.7rem 1rem;
+  background: #450920;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 1rem;
+  transition: background 0.3s, transform 0.2s;
+}
+
+button:hover {
+  background: #A53860;
+  transform: translateY(-2px);
+}
+
+/* MOBILE RESPONSIVE */
+@media (max-width: 768px) {
+  main {
+    flex-direction: column;
+    height: auto;
+    overflow: auto;
+  }
+
+  .canvas {
+    min-height: 300px;
+  }
+}
+
+/* FORM LAYOUT IMPROVEMENTS */
+form#editForm {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1rem;
+}
+
+.editor select {
+  padding: 10px;
+  border-radius: 8px;
+  border: 2px solid #DA627D;
+  font-size: 1rem;
+  background: #fff;
+  transition: all 0.3s;
+}
+
+.editor select:focus {
+  outline: none;
+  border-color: #A53860;
+  box-shadow: 0 0 6px #DA627D;
+}
